@@ -1,0 +1,6 @@
+- how to create a virtual environment
+    - `python -m venv venv`
+    - the above command is used to create a virtual environment
+    - here first venv is the name of the virtual environment and then venv is the name of the folder which is created
+- how to activate virtual environment
+    - `. venv/Scripts/activate`
