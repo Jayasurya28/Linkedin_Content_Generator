@@ -13,24 +13,25 @@ client = OpenAI(
     api_key=token,
 )
 
+user_input =input("Enter your prompt: ")
 response = client.chat.completions.create(
     messages=[
         {
             "role": "system",
-            "content": "You are a helpful assistant.",
+            "content": "You are a helpful assistant.Who is an expert linkedin content creator? You will assist the user to generate linkedin content.Generate suitable hashtags for the given content.",
         },
         {
             "role": "user",
-            "content": "What is the capital of France?",
+            "content": user_input,
         },
-        {
-            "role": "assistant",
-            "content": "The capital of France is Paris.",
-        },
-        {
-            "role": "user",
-            "content": "What about Spain?",
-        }
+        # {
+        #     "role": "assistant",
+        #     "content": "The capital of France is Paris.",
+        # },
+        # {
+        #     "role": "user",
+        #     "content": "What about Spain?",
+        # }
     ],
     model=model_name,
 )
